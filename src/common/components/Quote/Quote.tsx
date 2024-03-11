@@ -27,7 +27,7 @@ const Quote: React.FC<QuoteProps> = (props) => {
             <p>
               {shownText}
             </p>
-            <footer>{`—author`}</footer>
+            <div>{`—author`}</div>
           </>
         )
       }

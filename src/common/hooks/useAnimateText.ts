@@ -7,11 +7,11 @@ const useAnimateText = (text: string) => {
 
   useEffect(() => {
 
-    let index = 0;
+    let index = -1;
     const interval = setInterval(() => {
-      setShownText((prevShownText) => prevShownText + text[index]);
       index++;
-
+      setShownText((prevShownText) => prevShownText + text[index]);
+      
       if (index === textLen) {
         clearInterval(interval);
       }
@@ -19,7 +19,7 @@ const useAnimateText = (text: string) => {
 
     return () => clearInterval(interval);
 
-  }, [text]);
+  }, []);
   
   return {
     shownText
